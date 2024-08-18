@@ -1,4 +1,4 @@
-#include "EBO.hpp"
+#include "EBO.h"
 
 EBO::EBO(const std::vector<GLuint>& tri_indices){
   glGenBuffers(1, &ebo);//create EBO
@@ -7,7 +7,7 @@ EBO::EBO(const std::vector<GLuint>& tri_indices){
 }
 
 void EBO::free(){
-  glDeleteVertexArrays(1, &ebo); //delete
+  glDeleteBuffers(1, &ebo); //delete
 }
 
 void EBO::bind(){

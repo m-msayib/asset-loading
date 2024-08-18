@@ -1,4 +1,4 @@
-#include "VBO.hpp"
+#include "VBO.h"
 
 VBO::VBO(const std::vector<GLfloat>& tri_verts){
   glGenBuffers(1, &vbo);//create VBO
@@ -12,7 +12,6 @@ void VBO::free(){
 
 void VBO::bind(){
   glBindBuffer(GL_ARRAY_BUFFER, vbo);//bind to current VBO
-
 }
 
 void VBO::unbind(){
